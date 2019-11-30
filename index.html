@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Resume React</title>
+</head>
+<body>
+        <div id="application-root"></div>
+        <div class = 'main'></div>
+        <div class="Employment-History"></div>
+        <div class ="Education"></div>
+        <div class ="Contact-Info"></div>
+        <div class ="MyPhoto"></div>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <script src= "https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+
+<script type = "text/babel">
+function App() {
+    return ( <header>
+   <h1>Sally Student Resume</h1>
+   </header>
+   ) 
+}
+ReactDOM.render(React.createElement(App), document.querySelector("#application-root"));
+
+
+function Aboutme() {
+    return (<main>
+     <h2>About Me</h2>
+     <p> A driven web developer ready to take on the world!</p>
+    </main>
+    )
+}
+
+ReactDOM.render(React.createElement(Aboutme), document.querySelector(".main"));
+
+
+function Employmenthistory(){
+    return (<section class ="employmentHistory">
+   <h2>Employment History</h2>
+     <h3> Spotify - Software Engineer May 2017- Present </h3> 
+     <p> Processes the algorithm for "New Music Fridays."</p>
+    
+    <h3> Pandora - UX design April 2015 - May 2017</h3>
+     <p> Developed the graphical user interface for Pandora's mobile application.</p>
+        </section>
+
+    )
+}
+
+ReactDOM.render(<Employmenthistory />, document.querySelector('.Employment-History'));
+
+function Education(){
+    return (<section>
+  <h2>Education:</h2>
+   <p>Bloc/Thinkful Online</p>
+     </section>
+    )
+}
+
+ReactDOM.render(<Education />, document.querySelector('.Education'));
+
+function Contactinfo(){
+    return (<section>
+  <h2>Contact Info:</h2>
+  <h3>Sally Student</h3>
+  <address>
+ <a href="mailto:sallys@gmail.com">sallys@gmail.com</a><br/>
+<a href="tel:800-588-2300">800-588-2300</a><br/>
+  </address></section>
+
+    )
+}
+
+ReactDOM.render(React.createElement(Contactinfo), document.querySelector('.Contact-Info'));
+
+
+function Myphoto() {
+    return ( <img src ="https://imgix.bustle.com/elite-daily/2017/07/23123110/broad-city-val-1.jpg?w=1020&h=574&fit=crop&crop=faces&auto=format&q=70&dpr=2"alt="https://imgix.bustle.com/elite-daily/2017/07/23123110/broad-city-val-1.jpg?w=1020&h=574&fit=crop&crop=faces&auto=format&q=70&dpr=2" width ="304" height ="171"></img>
+     )
+}
+
+ReactDOM.render(<Myphoto />, document.querySelector('.MyPhoto'));
+
+
+</script>
+    
+</body>
+</html>
